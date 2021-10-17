@@ -144,11 +144,6 @@
   <ItemGroup>
     <ClInclude Include="main.h" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\CSCN71020-A2UnitTests.tests\CSCN71020-A2UnitTests.tests.vcxproj">
-      <Project>{95249d0f-88ef-4a4e-be15-6ff06907d87d}</Project>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

@@ -1,9 +1,10 @@
 #include "pch.h"
 #include "CppUnitTest.h"
-extern"C" int getPerimeter(int* length, int* width);
-extern"C" int getArea(int* length, int* width);
-extern"C" void setLength(int input, int* length);
-extern"C" void setWidth(int input, int* width);
+ 
+extern "C"
+{
+#include "main.h"
+}
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
@@ -23,7 +24,8 @@ namespace CSCN71020A2UnitTeststests
 			Assert::AreEqual(ExpPerimeter, result);
 		}
 		TEST_METHOD(getArea_7and7_49)
-		{//this test is for checking area of rectangle
+		{
+			//this test is for checking area of rectangle
 			int lengt = 7;
 			int widt = 7;
 			const int ExpArea = 49;
@@ -33,7 +35,8 @@ namespace CSCN71020A2UnitTeststests
 		}
 
 		TEST_METHOD(setlength_7_7)
-		{//this test is for checking set length of rectangle
+		{
+			//this test is for checking set length of rectangle
 			int inp = 7;
 			int len;
 			setLength(inp, &len);
@@ -57,21 +60,24 @@ namespace CSCN71020A2UnitTeststests
 			Assert::AreNotEqual(inp, len);//seeing whether they are getting as expected
 		}
 		TEST_METHOD(setwidth_8_8)
-		{// this test is for checking set width of rectangle
+		{
+			// this test is for checking set width of rectangle
 			int inp = 8;
 			int widt;
 			setWidth(inp, &widt);
 			Assert::AreEqual(inp, widt);//seeing whether they are getting as expected
 		}
 		TEST_METHOD(setwidth_88_88)
-		{// this test is for checking set  width of rectangle
+		{
+			// this test is for checking set  width of rectangle
 			int inp = 88;
 			int widt;
 			setWidth(inp, &widt);
 			Assert::AreEqual(inp, widt);//seeing whether they are getting as expected
 		}
 		TEST_METHOD(setwidth_105_notequal)
-		{// this test is for checking set width of rectangle
+		{
+			// this test is for checking set width of rectangle
 			int inp = 105;
 			int widt;
 			setWidth(inp, &widt);
